@@ -1,0 +1,44 @@
+= Project discussion report, Things that needs to be change/modified
+:toc: left
+:Author1: Chandan chandan@ee.iitd.ac.in 
+:sectnums: true
+:icons: font
+
+== Features required/suggested by NDRI Team in Pedometers
+. Battery lifecycle on a single charge (21-23 days) minimum
+. Pedometer should measures Behavioural Parameters
+.. Walking steps
+.. Standing time
+.. Sleeping time
+.. Chewing time
+.. Ruminating time
+. Wireless Data Transfer (twice a day) (preferably BLE, LoRa)
+. Height of the existing pedometers should be less as compare to existing pedometer (32mm)
+
+== Existing Pedometer Features
+. Battery life cycle on a single charge (2 days)
+. Step counts
+. Data Storage in SD card
+. Data transfer via WiFi (available)
+
+== Earlier plannned development of Pedometer
+. reduced pedometer case height to 24 mm. (working to case designing)
+. use of LoRa for data transfer to gateway then to database server. (successfully established connection between lora module to lorawan gateway) 
+
+== Existing Hardware components in Pedometer
+. ESP32 module (wifi+bluetooth+microcontroller)
+. SD card reader + SD card
+. Battery 800 maH (Li-po battery)
+. LoRa (RFM95W 865-868MHz) module (planned to add)
+
+
+== Design challenges
+. How power can be saved ?
+[horizontal]
+Idea 1 :: Increase the battery size and quality But, this will [.red] ++increase the++ +
+weight of the module which may create problems.
+[horizontal]
+Idea 2 :: Do not take measurements all the time 
+instead of it, just try to + 
+record for some specific time periods for sometimes, let say 15-20 mins a day 
+
