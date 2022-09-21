@@ -12,7 +12,7 @@
 .. Sleeping time
 .. Chewing time
 .. Ruminating time
-. Wireless Data Transfer (twice a day) (preferably BLE, LoRa)
+. Wireless Data Transfer (twice a day on specific locations like milking parlour)
 . Height of the existing pedometers should be less as compare to existing pedometer (32mm)
 
 == Existing Pedometer Features
@@ -26,19 +26,36 @@
 . use of LoRa for data transfer to gateway then to database server. (successfully established connection between lora module to lorawan gateway) 
 
 == Existing Hardware components in Pedometer
-. ESP32 module (wifi+bluetooth+microcontroller)
+. M5ATOM matrix (esp32 + mp6556)
 . SD card reader + SD card
+. RTC Clock IC (DS3231)
 . Battery 800 maH (Li-po battery)
+. ESP32 module (wifi+bluetooth+microcontroller) (planned to add)
+. IMU Sensors (LSM9DS1) (planned to add)
 . LoRa (RFM95W 865-868MHz) module (planned to add)
 
 
 == Design challenges
 . How power can be saved ?
 [horizontal]
-Idea 1 :: Increase the battery size and quality But, this will [.red] ++increase the++ +
-weight of the module which may create problems.
+Idea 1{empty}footnote:[The idea is suggested by Dr. T.K. Mohanty Sir] :: [.yellow]++Increase the battery size and quality++ But, this will [.red]++increase the++ +
+[.red]++weight of the module which may create problems to cows.++
 [horizontal]
-Idea 2 :: Do not take measurements all the time 
-instead of it, just try to + 
-record for some specific time periods for sometimes, let say 15-20 mins a day 
+Idea 2{empty}footnote:[The idea is suggested by Dr. T.K. Mohanty Sir and Dr. Mukesh Bhakat Sir based on their observations] :: Do not take measurements all the time 
+instead of it, just try to record +
+for some specific time periods for sometimes, let say 15-20 mins/day, +
+try to predict what will the total number of steps taken by that cows in + 
+this way we may able to get a battery lifecycle of 30 days, + 
+[.red]++But this will definitely decreases the device accuracy which is our one of the most concerned area.++
+[horizontal]
+Idea 3{empty}footnote:[Based on discussion with Prof. Subrat Kar Sir and Sahil Sir] :: We may use msp430 microcontroller or some similar low +
+power microcontroller interfaced with BLE device, to send data +
+and reduce power consumption in which may increase the battery lifecycle on a single charge.
+
+. How to fix the pedometer near neck region of the cows with displacing in its own?
+
+. How different behavioural parameter can be classified?
+
+ 
+
 
