@@ -36,6 +36,7 @@
 
 
 == Design challenges
+
 . How power can be saved ?
 [horizontal]
 Idea 1{empty}footnote:[The idea is suggested by Dr. T.K. Mohanty Sir] :: [.yellow]++Increase the battery size and quality++ But, this will [.red]++increase the++ +
@@ -54,7 +55,11 @@ and reduce power consumption in which may increase the battery lifecycle on a si
 
 . How to fix the pedometer near neck region of the cows with displacing in its own?
 
-. How different behavioural parameter can be classified?
+[link=https://drive.google.com/file/d/1AZtfVbEmzgag0A4p_6IyOgwGF-3jGgjs/view?usp=sharing] 
+image::G1618.PNG[Cow's image with attached pedometer at its jaws]
+
+== Classification Challenges
+. How can we classify different behavioural parameters based on acclerometer datas only?
 
  
 
